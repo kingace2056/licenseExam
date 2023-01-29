@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:license_exam/screens/traffic_signals_screen.dart';
 import './constraints/constraints.dart';
-import 'screens/daily_question.dart';
+import 'screens/daily_question_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const DailyQuestion(),
+      initialRoute: '/',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: kPrimary,
@@ -21,42 +22,51 @@ class MyApp extends StatelessWidget {
           toolbarTextStyle: ThemeData.light()
               .textTheme
               .copyWith(
-                titleLarge: const TextStyle(
-                  color: Colors.purple,
+                titleLarge: TextStyle(
+                  color: kPrimary,
                   fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.w700,
                 ),
               )
               .bodyMedium,
           titleTextStyle: ThemeData.light()
               .textTheme
               .copyWith(
-                titleLarge: const TextStyle(
-                  color: Colors.purple,
+                titleLarge: TextStyle(
+                  color: kPrimary,
                   fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.w700,
                 ),
               )
               .titleLarge,
         ),
         textTheme: Theme.of(context).textTheme.copyWith(
               // Style Answer Text
-              displayLarge: const TextStyle(
-                color: Colors.white,
+              displayLarge: TextStyle(
+                color: primWhite,
                 fontSize: 20.0,
+                fontFamily: 'Inter',
               ),
               // Style Question Text
-              displayMedium: const TextStyle(
-                color: Colors.purple,
+              displayMedium: TextStyle(
+                color: kPrimary,
                 fontSize: 20.0,
+                fontFamily: 'Inter',
               ),
               // Style Options Text
-              displaySmall: const TextStyle(
-                color: Colors.black,
+              displaySmall: TextStyle(
+                color: primBlack,
                 fontSize: 16.0,
+                fontFamily: 'Inter',
               ),
             ),
       ),
+      routes: {
+        '/': (context) => const DailyQuestion(),
+        TrafficSignalScreen.routeName: (context) => const TrafficSignalScreen(),
+      },
     );
   }
 }

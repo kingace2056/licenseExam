@@ -39,7 +39,7 @@ class _AnswerState extends State<Answer> {
             Expanded(
               child: Row(
                 children: [
-                  Text("Ans:", style: Theme.of(context).textTheme.displayLarge),
+                  Text("Ans:", style: Theme.of(context).textTheme.displayLarge,),
                   const SizedBox(
                     width: 18.0,
                   ),

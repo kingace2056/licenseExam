@@ -57,3 +57,6 @@ Gradient bluethree = const LinearGradient(colors: [
   Color.fromARGB(255, 72, 132, 238),
   Color.fromARGB(255, 6, 188, 251)
 ]);
+
+double screenPaddingHorizontal = 16;
+double screenPaddingVertical = 8;

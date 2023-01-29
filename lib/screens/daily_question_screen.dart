@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:license_exam/constraints/constraints.dart';
+import 'package:license_exam/screens/traffic_signals_screen.dart';
 import '../qdata/quest.dart';
 import '../widgets/question_answer_widget.dart';
 
@@ -59,16 +61,20 @@ class DailyQuestion extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          leading: SizedBox(
-            width: 20.0,
-            height: 20.0,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey[100],
-                  elevation: 0,
-                  padding: const EdgeInsets.symmetric(vertical: 4.0)),
-              onPressed: () {},
-              child: const Icon(Icons.arrow_back_ios, color: Colors.purple),
+          leading: Container(
+            margin: EdgeInsets.only(
+                left: screenPaddingHorizontal, top: screenPaddingVertical),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: Colors.grey[100],
+              shape: BoxShape.circle,
+            ),
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, TrafficSignalScreen.routeName);
+              },
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.purple),
             ),
           ),
           title: const Text("Daily Questions"),
@@ -76,14 +82,26 @@ class DailyQuestion extends StatelessWidget {
           elevation: 0,
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-          child: ListView.builder(
-            itemCount: generateDailyFilteredList.length,
-            itemBuilder: (context, index) => QuestionWidget(
-              question: generateDailyFilteredList[index].question!,
-              options: questionsList[index].answers!,
-            ),
+          padding: EdgeInsets.symmetric(
+            horizontal: screenPaddingHorizontal,
           ),
+          child: ListView.builder(
+              itemCount: generateDailyFilteredList.length,
+              itemBuilder: (context, index) {
+                double paddingBottom;
+                if (index == generateDailyFilteredList.length - 1) {
+                  paddingBottom = 8;
+                } else {
+                  paddingBottom = 24;
+                }
+                return Padding(
+                  padding: EdgeInsets.only(bottom: paddingBottom),
+                  child: QuestionWidget(
+                    question: generateDailyFilteredList[index].question!,
+                    options: questionsList[index].answers!,
+                  ),
+                );
+              }),
         ),
       ),
     );

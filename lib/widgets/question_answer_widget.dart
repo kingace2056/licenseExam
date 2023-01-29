@@ -14,9 +14,7 @@ class QuestionWidget extends StatelessWidget {
     String answer = "";
     final optionList = options.keys.toList();
 
-    return Padding(
-      padding: const EdgeInsets.only(top: 24.0),
-      child: Flex(
+    return Flex(
         direction: Axis.vertical,
         children: [
           // Questions Here
@@ -68,7 +66,6 @@ class QuestionWidget extends StatelessWidget {
           // Answers Here
           Answer(answer: answer)
         ],
-      ),
     );
   }
 }
