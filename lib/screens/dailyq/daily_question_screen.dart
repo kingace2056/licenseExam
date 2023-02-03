@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:license_exam/constraints/constraints.dart';
 import 'package:license_exam/screens/traffic_signals_screen.dart';
-import '../qdata/quest.dart';
-import '../widgets/question_answer_widget.dart';
+import '../../qdata/quest.dart';
+import 'question_answer_widget.dart';
 
 class StatefulWrapper extends StatefulWidget {
   final Function onInit;

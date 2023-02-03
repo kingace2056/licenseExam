@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:license_exam/screens/traffic_signals_screen.dart';
 import './constraints/constraints.dart';
-import 'screens/daily_question_screen.dart';
+import 'screens/dailyq/daily_question_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
                 titleLarge: TextStyle(
                   color: kPrimary,
                   fontSize: 24.0,
-                  fontFamily: 'Inter',
+                  fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w700,
                 ),
               )
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                 titleLarge: TextStyle(
                   color: kPrimary,
                   fontSize: 24.0,
-                  fontFamily: 'Inter',
+                  fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w700,
                 ),
               )
@@ -47,19 +47,19 @@ class MyApp extends StatelessWidget {
               displayLarge: TextStyle(
                 color: primWhite,
                 fontSize: 20.0,
-                fontFamily: 'Inter',
+                fontFamily: 'Montserrat',
               ),
               // Style Question Text
               displayMedium: TextStyle(
-                color: kPrimary,
-                fontSize: 20.0,
-                fontFamily: 'Inter',
-              ),
+                  color: kPrimary,
+                  fontSize: 20.0,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w500),
               // Style Options Text
               displaySmall: TextStyle(
                 color: primBlack,
                 fontSize: 16.0,
-                fontFamily: 'Inter',
+                fontFamily: 'Montserrat',
               ),
             ),
       ),

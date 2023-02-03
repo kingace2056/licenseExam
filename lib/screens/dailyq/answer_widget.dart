@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Answer extends StatefulWidget {
+class AnswerWidget extends StatefulWidget {
   final String answer;
-  const Answer({Key? key, required this.answer}) : super(key: key);
+  const AnswerWidget({Key? key, required this.answer}) : super(key: key);
 
   @override
-  State<Answer> createState() => _AnswerState();
+  State<AnswerWidget> createState() => _AnswerWidgetState();
 }
 
-class _AnswerState extends State<Answer> {
+class _AnswerWidgetState extends State<AnswerWidget> {
   String hiddenAnswer = "";
   bool isVisible = false;
   void toggleVisibility() {
@@ -39,7 +39,10 @@ class _AnswerState extends State<Answer> {
             Expanded(
               child: Row(
                 children: [
-                  Text("Ans:", style: Theme.of(context).textTheme.displayLarge,),
+                  Text(
+                    "Ans:",
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
                   const SizedBox(
                     width: 18.0,
                   ),

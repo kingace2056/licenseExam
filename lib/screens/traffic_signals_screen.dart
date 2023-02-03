@@ -15,16 +15,17 @@ class TrafficSignalScreen extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
       ),
+      backgroundColor: primWhite,
       body: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: screenPaddingHorizontal,
             vertical: screenPaddingVertical),
         child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 100,
-            childAspectRatio: 1,
-            crossAxisSpacing: 12,
-            mainAxisSpacing: 12,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            crossAxisSpacing: 3,
+            mainAxisExtent: MediaQuery.of(context).size.height * 0.18,
+            mainAxisSpacing: 3,
           ),
           itemBuilder: (context, index) {
             var key = DataFiles.mandatorySigns.keys.elementAt(index);

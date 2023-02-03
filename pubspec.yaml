@@ -79,6 +79,11 @@ flutter:
         - asset: assets/fonts/Inter/Inter-Regular.ttf
         - asset: assets/fonts/Inter/Inter-Bold.ttf
           weight: 700
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+          weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
