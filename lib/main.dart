@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:license_exam/screens/home/home_screen.dart';
 import 'package:license_exam/screens/traffic_signals/traffic_signals_screen.dart';
+import 'package:license_exam/screens/traffic_signals/signaltype_page.dart';
 import './constraints/constraints.dart';
 import 'screens/dailyq/daily_question_screen.dart';
 
@@ -64,8 +66,10 @@ class MyApp extends StatelessWidget {
             ),
       ),
       routes: {
-        '/': (context) => const DailyQuestion(),
-        TrafficSignalScreen.routeName: (context) => const TrafficSignalScreen(),
+        '/': (context) => const HomeScreen(),
+        DailyQuestion.routeName: (context) => const DailyQuestion(),
+        SignalTypePage.routename: (context) => const SignalTypePage(),
+        TrafficSignalScreen.routeName: (context) => TrafficSignalScreen(),
       },
     );
   }

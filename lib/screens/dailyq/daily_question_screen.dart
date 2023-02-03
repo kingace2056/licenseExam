@@ -26,6 +26,7 @@ class _StatefulWrapperState extends State<StatefulWrapper> {
 }
 
 class DailyQuestion extends StatelessWidget {
+  static const routeName = '/dailyq';
   const DailyQuestion({Key? key}) : super(key: key);
   List generateQuesOfDayGen() {
     int dateVar = DateTime.now().month + DateTime.now().day;
@@ -63,7 +64,7 @@ class DailyQuestion extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: primWhite,
           leadingWidth: MediaQuery.of(context).size.width * 0.15,
-          leading: BackButtonWidget(),
+          leading: const BackButtonWidget(),
           title: const Text("Daily Questions"),
           centerTitle: true,
           elevation: 0,
