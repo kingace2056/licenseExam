@@ -20,12 +20,16 @@ class _AnswerWidgetState extends State<AnswerWidget> {
     });
   }
 
+  // showing number of stars will tell what answer is correct so we use fixed number of stars for all answers
+  // String hideAnswerLikePassword(String answer) {
+  //   int length = answer.length;
+  //   for (int i = 0; i < length; i++) {
+  //     hiddenAnswer += "*";
+  //   }
+  //   return hiddenAnswer;
+  // }
   String hideAnswerLikePassword(String answer) {
-    int length = answer.length;
-    for (int i = 0; i < length; i++) {
-      hiddenAnswer += "*";
-    }
-    return hiddenAnswer;
+    return "************";
   }
 
   @override
