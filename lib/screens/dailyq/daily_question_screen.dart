@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:license_exam/constraints/constraints.dart';
-import 'package:license_exam/screens/traffic_signals/traffic_signals_screen.dart';
+import 'package:license_exam/widgets/buttons/back_button.dart';
 import '../../qdata/quest.dart';
 import 'widgets/question_answer_widget.dart';
 
@@ -61,22 +61,9 @@ class DailyQuestion extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          leading: Container(
-            margin: EdgeInsets.only(
-                left: screenPaddingHorizontal, top: screenPaddingVertical),
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: Colors.grey[100],
-              shape: BoxShape.circle,
-            ),
-            child: IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, TrafficSignalScreen.routeName);
-              },
-              icon: const Icon(Icons.arrow_back_ios, color: Colors.purple),
-            ),
-          ),
+          backgroundColor: primWhite,
+          leadingWidth: MediaQuery.of(context).size.width * 0.15,
+          leading: BackButtonWidget(),
           title: const Text("Daily Questions"),
           centerTitle: true,
           elevation: 0,

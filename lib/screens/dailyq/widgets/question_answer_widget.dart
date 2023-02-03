@@ -24,7 +24,7 @@ class QuestionWidget extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             width: double.infinity,
-            color: primWhite,
+            color: primGrey,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

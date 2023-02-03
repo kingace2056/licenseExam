@@ -43,6 +43,7 @@ class TrafficSignalCard extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Text(
                   text,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                   overflow: TextOverflow.ellipsis,
                 ),
               ),

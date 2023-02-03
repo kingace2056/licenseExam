@@ -16,6 +16,8 @@ Color primBlack = const Color(0xFF130F14);
 Color primWhite = const Color(0xFFFFFFFF);
 Color primGrey = const Color(0xFFF0F0F0);
 
+// for question answers
+Color ansGreen = const Color(0xFF3BA55D);
 // Color kPrimaryLight = Color.fromARGB(255, 54, 79, 160);
 
 Gradient redgrad = const LinearGradient(colors: [

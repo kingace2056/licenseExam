@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../constraints/constraints.dart';
 import '../../qdata/sign_data.dart';
-import 'traffic_signal_widget.dart';
+import 'widgets/traffic_signal_widget.dart';
 
 class TrafficSignalScreen extends StatelessWidget {
   static const routeName = '/traffic_signals';
@@ -14,6 +14,7 @@ class TrafficSignalScreen extends StatelessWidget {
         title: const Text('Traffic Signals'),
         centerTitle: true,
         elevation: 0,
+        iconTheme: IconThemeData(color: kPrimary),
       ),
       backgroundColor: primWhite,
       body: Padding(

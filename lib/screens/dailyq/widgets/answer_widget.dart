@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:license_exam/constraints/constraints.dart';
+import 'package:license_exam/constraints/icon_list.dart';
 
 class AnswerWidget extends StatefulWidget {
   final String answer;
@@ -37,9 +40,9 @@ class _AnswerWidgetState extends State<AnswerWidget> {
     return ClipRRect(
       borderRadius: BorderRadius.circular(8.0),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
         width: double.infinity,
-        color: Colors.green[400],
+        color: ansGreen,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -69,9 +72,10 @@ class _AnswerWidgetState extends State<AnswerWidget> {
               ),
             ),
             IconButton(
-              icon: Icon(
-                isVisible ? Icons.visibility : Icons.visibility_off,
+              icon: SvgPicture.asset(
+                isVisible ? IconsList.eyeOpen : IconsList.eyeClose,
                 color: Colors.white,
+                height: 20,
               ),
               onPressed: toggleVisibility,
             )
