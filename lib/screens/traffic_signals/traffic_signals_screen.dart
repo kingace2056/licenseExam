@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../constraints/constraints.dart';
-import '../qdata/sign_data.dart';
-import '../widgets/traffic_signal_widget.dart';
+import '../../constraints/constraints.dart';
+import '../../qdata/sign_data.dart';
+import 'traffic_signal_widget.dart';
 
 class TrafficSignalScreen extends StatelessWidget {
   static const routeName = '/traffic_signals';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:license_exam/screens/traffic_signals_screen.dart';
+import 'package:license_exam/screens/traffic_signals/traffic_signals_screen.dart';
 import './constraints/constraints.dart';
 import 'screens/dailyq/daily_question_screen.dart';
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:license_exam/screens/dailyq/answer_widget.dart';
-import '../../constraints/constraints.dart';
+import 'package:license_exam/screens/dailyq/widgets/answer_widget.dart';
+
+import '../../../constraints/constraints.dart';
 
 class QuestionWidget extends StatelessWidget {
   final String question;

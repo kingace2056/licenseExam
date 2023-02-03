@@ -14,6 +14,9 @@ class _AnswerWidgetState extends State<AnswerWidget> {
   void toggleVisibility() {
     setState(() {
       isVisible = !isVisible;
+      if (isVisible == true) {
+        hiddenAnswer = "";
+      }
     });
   }
 
