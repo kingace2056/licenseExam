@@ -86,7 +86,7 @@ class DailyQuestion extends StatelessWidget {
                   padding: EdgeInsets.only(bottom: paddingBottom),
                   child: QuestionWidget(
                     question: generateDailyFilteredList[index].question!,
-                    options: questionsList[index].answers!,
+                    options: generateDailyFilteredList[index].answers!,
                   ),
                 );
               }),

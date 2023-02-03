@@ -1,3 +1,4 @@
 1. showing variable number of stars - fixed 
 2. some color issues - fixed
 3. font not correct - fixed [use Montserrat]
+4. answer[options] are shown differently - fixed
