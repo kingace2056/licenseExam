@@ -63,7 +63,6 @@ class DailyQuestion extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: primWhite,
-          leadingWidth: MediaQuery.of(context).size.width * 0.15,
           leading: const BackButtonWidget(),
           title: const Text("Daily Questions"),
           centerTitle: true,

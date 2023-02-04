@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:license_exam/widgets/buttons/back_button.dart';
 
 import '../../constraints/constraints.dart';
 import '../../qdata/sign_data.dart';
@@ -40,7 +41,7 @@ class _TrafficSignalScreenState extends State<TrafficSignalScreen> {
                 : 'Info Signs'),
         centerTitle: true,
         elevation: 0,
-        iconTheme: IconThemeData(color: kPrimary),
+        leading: BackButtonWidget(),
       ),
       backgroundColor: primWhite,
       body: Padding(
